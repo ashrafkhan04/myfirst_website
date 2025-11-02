@@ -1,0 +1,142 @@
+/* 🛒 MAIN CART CONTAINER */
+.carts {
+  width: 100%;
+  margin: 30px auto;
+  padding: 24px;
+  background: #f6f7fb;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  gap: 22px;
+  margin-bottom: 10px;
+}
+
+.carts_all_product {
+  margin-bottom: 20px;
+}
+
+/* 🎴 SINGLE CART ITEM */
+.carts_items {
+
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  padding: 16px 20px;
+  transition: all 0.25s ease;
+}
+
+.carts_items:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* 🖼 IMAGE LEFT SIDE */
+.carts_items_img {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin: 5px;
+}
+
+/* 📄 DETAILS RIGHT SIDE */
+.carts_items_titles {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+.carts_items_titles p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* 💰 PRICE */
+.product_price {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0b69ff;
+}
+
+/* 🔢 QUANTITY */
+.carts_button_container {
+  
+ width: 100%;
+}
+
+/* 💵 TOTAL AMOUNT (BOTTOM) */
+.carts_total_amounts {
+  width: 30%;
+  margin: 10px;
+  background: #fff;
+  padding: 16px 18px;
+  border-radius: 10px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.total_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.total_label {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.total_value {
+  color: #0f172a;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+/* 🛍 CHECKOUT BUTTON */
+.checkout_btn {
+  background: #0b69ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.checkout_btn:hover {
+  background: #084ad5;
+}
+
+/* 📱 RESPONSIVE (Tablet & Phone) */
+@media (max-width: 992px) {
+
+
+  .carts_items_img {
+    width: 2rem;
+    height: auto;
+    max-height: 250px;
+
+  }
+
+  .carts_items_titles {
+    width: 100%;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+
+  
+    
+  }
+
+
+
+  .carts_total_amounts {
+    width: 90%;
+    margin: 20px auto;
+  }
+}

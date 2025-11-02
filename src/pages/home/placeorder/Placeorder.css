@@ -1,0 +1,164 @@
+/* 🛒 MAIN PLACE ORDER CONTAINER */
+.placeorder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f8fafc;
+}
+
+/* 🧾 INNER CONTAINER */
+.placeorder_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+/* 📦 LEFT SECTION (Cart Summary) */
+.Placeorder_left {
+  flex: 1;
+  min-width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Placeorder_left:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.Placeorder_left h2 {
+  font-size: 1.4rem;
+  color: #111827;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+  border-bottom: 2px solid #0b69ff;
+  display: inline-block;
+}
+
+/* 💳 RIGHT SECTION (Address & Form) */
+.placeorder_right {
+  flex: 1;
+  min-width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.placeorder_right:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.placeorder_right h1 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #1e293b;
+  margin-bottom: 20px;
+  border-left: 5px solid #0b69ff;
+  padding-left: 10px;
+}
+
+/* 📝 INPUTS & TEXTAREA */
+.placeorder_input {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.placeorder_input label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.placeorder_input input,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.placeorder_input input:focus,
+textarea:focus {
+  border-color: #0b69ff;
+  box-shadow: 0 0 5px rgba(11, 105, 255, 0.3);
+}
+
+/* ✉️ TEXTAREA */
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* ✅ BUTTONS */
+.carts_botton {
+ font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-transform: capitalize;
+  border: none;
+  cursor: pointer;
+  transition: background 0.8s ease;
+}
+.carts_botton:hover {
+  background: #dde6fa;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .placeorder_container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .Placeorder_left,
+  .placeorder_right {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .placeorder_right h1 {
+    font-size: 1.3rem;
+  }
+
+  .Placeorder_left h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .placeorder {
+    padding: 20px 10px;
+  }
+
+  .placeorder_container {
+    margin-top: 40px;
+  }
+
+  .placeorder_input input,
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  .carts_botton {
+    width: 100%;
+    text-align: center;
+  }
+}

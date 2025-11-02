@@ -1,0 +1,228 @@
+/* 🌟 CARD CONTAINER */
+.displayitems {
+  width: 100%;
+  max-width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(240, 150, 150, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px;
+  transition: all 0.3s ease-in-out;
+  animation: FadeIn 0.8s ease-in;
+  overflow: hidden;
+}
+
+.displayitems:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(240, 150, 150, 0.35);
+}
+
+/* 🖼 IMAGE SECTION */
+.display_images {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  opacity: 0.97;
+  transition: all 0.4s ease;
+}
+
+.display_images:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+/* 🖼 PRODUCT IMAGE */
+.display_img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+.display_img:hover {
+  transform: scale(1.05);
+}
+
+/* 🧾 ADD & COUNTER CONTAINER — centered below image */
+.display_action_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* ➕ ADD BUTTON — center under image */
+.display_images .add,
+.display_action_container .add {
+  background: linear-gradient(135deg, #ff5252, #ff7676);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  /* padding: 10px 24px; */
+  width: 50px;
+  height: 30px;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(255, 82, 82, 0.4);
+  border: none;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add:hover {
+  background: linear-gradient(135deg, #ff3333, #ff6666);
+  box-shadow: 0 6px 14px rgba(255, 82, 82, 0.5);
+  transform: scale(1.05);
+}
+
+/* ➖➕ COUNTER (centered perfectly under image) */
+.display_items_control {
+  background-color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 120px;
+  height: 38px;
+  border-radius: 50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  
+
+}
+
+.display_items_control span {
+  cursor: pointer;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff4b4b, #ff6c6c);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(255, 82, 82, 0.4);
+  user-select: none;
+}
+
+.display_items_control span:hover {
+  transform: scale(1.15);
+  background: linear-gradient(135deg, #ff2b2b, #ff5050);
+}
+
+.display_number{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.displayitems_icons_control{
+  position: absolute;
+  bottom: 20px;
+}
+
+
+/* 🧮 COUNT NUMBER (centered in the middle) */
+.display_number {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  width: 28px;
+  text-align: center;
+}
+
+/* ⭐ STAR RATING */
+.star_rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.start_rating {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
+/* 🧾 ITEM INFO */
+.display_items_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 280px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  text-align: center;
+  text-transform: capitalize;
+  color: #333;
+}
+
+.display_price {
+  font-size: 1.2rem;
+  color: #ff4b4b;
+  font-weight: 600;
+}
+
+.display_category {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ✨ ANIMATION */
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  .display_items_control {
+    width: 100px;
+    height: 34px;
+    gap: 10px;
+  }
+
+  .display_items_control span {
+    width: 26px;
+    height: 26px;
+    font-size: 1rem;
+  }
+
+  .add {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  .display_number {
+    font-size: 1rem;
+  }
+}

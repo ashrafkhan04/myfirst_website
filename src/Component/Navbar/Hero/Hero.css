@@ -1,0 +1,116 @@
+/* HERO CONTAINER */
+.container_hero {
+  width: 100%;
+  height: 34vw; 
+  background: url('./noodle_pre.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  animation: FadeIn 3s ease;
+}
+
+/* HERO CONTENT */
+.hero_content {
+  color: white;
+  position: absolute;
+  bottom: 18%;
+  left: 8%;
+  line-height: 1.2;
+  max-width: 90%;
+}
+
+/* HERO HEADING */
+.hero_heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+/* HERO PARAGRAPH */
+.hero_para {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+/* HERO BUTTONS */
+.hero_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* INDIVIDUAL BUTTONS */
+.hero_btn {
+  width: 160px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px 10px 5px 0;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero_btn:hover {
+  transform: scale(1.05);
+}
+
+/* MEDIA QUERIES */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .container_hero {
+    height: 50vw;
+  }
+  .hero_content {
+    bottom: 8%;
+    left: 5%;
+  }
+  .hero_heading {
+    font-size: 2.5rem;
+  }
+  .hero_para {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .container_hero {
+    height: 80vw;
+  }
+  .hero_content {
+    bottom: 10%;
+    left: 5%;
+  }
+  .hero_heading {
+    font-size: 2rem;
+  }
+  .hero_para {
+    font-size: 1rem;
+  }
+  .hero_buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hero_btn {
+    width: 100%;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .hero_heading {
+    font-size: 1.6rem;
+  }
+  .hero_para {
+    font-size: 0.9rem;
+  }
+  .hero_btn {
+    font-size: 0.9rem;
+    height: 38px;
+    padding: 8px;
+  }
+}

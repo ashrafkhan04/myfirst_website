@@ -1,0 +1,127 @@
+/* 🔹 NAVBAR CONTAINER */
+.container_Navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 LOGO */
+.logo {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+  flex-shrink: 0;
+  color: #222;
+}
+
+/* 🔹 NAV LINKS */
+.middle ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+
+.middle ul a {
+  list-style: none;
+  text-decoration: none;
+  list-style-type: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #333;
+  transition: color 0.7s ease-in-out, border-bottom 0.7s ease-in-out;
+}
+
+.middle ul a:hover {
+  color: #ff5252;
+}
+
+.middle .active {
+  border-bottom: 2px solid #ff5252;
+}
+.display_cards_shop_icon{
+  font-size: 1.4rem;
+}
+.display_icons_shop{
+  position: relative;
+}
+.display_icons_shop .dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 21px;
+  background-color: rgb(252, 47, 28);
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+
+/* 🖥️ Large Desktops */
+@media (max-width: 1200px) {
+  .middle ul {
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+}
+
+/* 💻 Tablets */
+@media (max-width: 992px) {
+  .middle ul {
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+}
+
+/* 📱 Mobile Phones */
+@media (max-width: 768px) {
+  .container_Navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .middle ul {
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+}
+
+/* 📱 Extra Small Phones */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .middle ul li {
+    font-size: 1rem;
+  }
+
+  .middle ul {
+    gap: 12px;
+  }
+}
